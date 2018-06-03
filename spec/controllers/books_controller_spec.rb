@@ -182,7 +182,7 @@ RSpec.describe BooksController, type: :controller do
 
       get :full_detail, params: {id: book.id}
 
-      expect(assigns(:book)).to eq(book)
+      expect(assigns(:book)).not_to eq(book)
       expect(assigns(:tasks)).to eq(tasks)
       expect(assigns(:categories)).to eq([category])
     end
